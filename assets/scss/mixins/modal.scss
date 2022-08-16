@@ -1,0 +1,127 @@
+@mixin modalKit {
+  padding: 10px;
+  position: fixed;
+  overflow: auto;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(#000000, .4);
+  z-index: 1400;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 0;
+  &:after {
+    display: inline-block;
+    vertical-align: middle;
+    width: 0;
+    height: 100%;
+    content: "";
+  }
+  &__box {
+    padding: 20px 30px 26px;
+    font-size: 16px;
+    white-space: normal;
+    word-break: break-word;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    position: relative;
+    max-width: 450px;
+    text-align: left;
+    background: #FFFFFF;
+    line-height: 145%;
+    color: #646B75;
+    box-shadow: 0px 25px 35px rgba(70, 70, 76, 0.25);
+    border-radius: 8px;
+    &_withdrawal {
+      max-width: 616px;
+    }
+  }
+  &__text {
+    margin-bottom: 18px;
+    &_center {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  }
+  &__success {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 50px 0 20px;
+    .success {
+      &__icon {
+        margin-bottom: 20px;
+      }
+      &__title {
+        font-weight: 600;
+        font-size: 20px;
+        color: #515151;
+      }
+    }
+  }
+  // сгруппированные строки информации
+  &__inner {
+    background: #F9F9F9;
+    border-radius: 22px;
+    padding: 18px 20px;
+    margin-bottom: 20px;
+  }
+  .item {
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+      &_bordered {
+        border-bottom: 1px solid #E1E4ED;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &__count {
+      font-weight: 600;
+      font-size: 17px;
+      color: #13A782;
+    }
+  }
+  // сгруппированные строки информации end
+  &__monthly {
+    width: 100%;
+    font-size: 12px;
+    text-align: right;
+    color: #848791;
+    margin: 5px 0;
+  }
+  &__content {
+
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  &__title {
+    font-weight: 600;
+    font-size: 20px;
+    color: #282F39;
+  }
+  &__close {
+    span {
+      &:before {
+        color: #121214;
+        font-size: 24px;
+      }
+    }
+  }
+  &__buttons {
+    display: flex;
+    &_main {
+      min-width: 201px;
+      margin-left: 30px;
+    }
+  }
+}
